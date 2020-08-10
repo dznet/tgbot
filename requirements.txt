@@ -19,7 +19,7 @@ pyaes==1.6.1
 pycparser==2.19
 PyJWT==1.7.0
 Pyrogram==0.9.3
-PySocks==1.6.8
+PySocks==1.7.1
 python-telegram-bot==11.1.0
 pytz==2018.7
 six==1.11.0
