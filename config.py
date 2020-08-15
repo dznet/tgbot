@@ -22,7 +22,7 @@ class Config(object):
 
 
 class Development(Config):
-  DATABASE_NAME = '{}_dev'.format(PACKAGE_NAME)
+  DATABASE_NAME = '{}_dev'.format(Config.PACKAGE_NAME)
   DEBUG = True
   SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   SQLALCHEMY_DATABASE_URI = Config.database_uri(DATABASE_NAME)
@@ -33,7 +33,7 @@ class Development(Config):
 
 
 class Testing(Config):
-  DATABASE_NAME = '{}_test'.format(PACKAGE_NAME)
+  DATABASE_NAME = '{}_test'.format(Config.PACKAGE_NAME)
   DEBUG = True
   SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   SQLALCHEMY_DATABASE_URI = Config.database_uri(DATABASE_NAME)
@@ -44,7 +44,7 @@ class Testing(Config):
 
 
 class Production(Config):
-  DATABASE_NAME = '{}_prod'.format(PACKAGE_NAME)
+  DATABASE_NAME = '{}_prod'.format(Config.PACKAGE_NAME)
   DEBUG = False
   SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   SQLALCHEMY_DATABASE_URI = Config.database_uri(DATABASE_NAME)
