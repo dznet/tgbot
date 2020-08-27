@@ -21,11 +21,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install wheel twine
     - name: Build and publish
       env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        PG_USERNAME: ${{ secrets.PG_USERNAME }}
+        PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
       run: |
         python db.py init
         python db.py migrate
