@@ -6,8 +6,8 @@ def create_api(config):
     from api.basemodels import db
     from api.baseviews import generate_password_hash
     from api.baseviews import login_required
-    from api.telegram.bot import TelegramBot
-    from api.telegram.client import TelegramClient
+    # from api.telegram.bot import TelegramBot
+    # from api.telegram.client import TelegramClient
     from flask import send_from_directory
     from flask import render_template
     from os.path import join
@@ -21,9 +21,9 @@ def create_api(config):
     #bot = TelegramBot(config.TELEGRAM_BOT_TOKEN)
     #bot.start()
 
-    client = TelegramClient(config.TELEGRAM_API_ID,
-                            config.TELEGRAM_API_HASH)
-    client.start()
+    # client = TelegramClient(config.TELEGRAM_API_ID,
+    #                         config.TELEGRAM_API_HASH)
+    #client.start()
 
     @api.route('/')
     def index():

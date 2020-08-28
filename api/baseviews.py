@@ -22,7 +22,7 @@ from werkzeug.security import check_password_hash
 
 signin = Blueprint('signin', __name__)
 endpoint = Api(signin)
-schema = AdminsSchema(strict=True)
+schema = AdminsSchema()
 
 def create_token(account):
   payload = {

@@ -16,7 +16,7 @@ from api.admins.models import Admins
 from api.admins.models import AdminsSchema
 
 admins = Blueprint('admins', __name__)
-schema = AdminsSchema(strict=True)
+schema = AdminsSchema()
 endpoint = Api(admins)
 
 
