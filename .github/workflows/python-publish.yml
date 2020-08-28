@@ -26,7 +26,7 @@ jobs:
         PG_USERNAME: ${{ secrets.PG_USERNAME }}
         PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
       run: |
-        python db.py init
-        python db.py migrate
-        python db.py upgrade
+        virtualenv -p /usr/bin/python3.8 .env
+        source .env/bin/activate
+        pip install -r requirements.txt 
         python run.py
